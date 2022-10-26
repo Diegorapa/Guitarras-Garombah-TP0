@@ -150,13 +150,17 @@
                 alert("Ingrese su correo electrónico")
                 document.fvalida.email.focus()
                 return 0;
-            }
+            } else { 
+                if (!(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)) {
+                alert("Ingrese un correo electrónico válido")
+                document.fvalida.email.focus()
+                return 0;
+            }}
 
             // TELEFONO ( Formato 11-1234-5678)
 
             let nroTel = document.fvalida.telefono.value
 
-            // if (!(/^([0-9]{2})+[- ]+([0-9]{4})+[- ]+([0-9]{4})$/i.test(nroTel))) {
 
             if (!(/^([0-9]{2})+[- ]+([0-9]{4})+[- ]+([0-9]{4})$/.test(nroTel))) {
                 alert("Ingrese un número telefónico válido, con el formato indicado. Puede utilizar guiones o espacios.");
