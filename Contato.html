@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -66,6 +66,114 @@
     </section>
 
 
+    <!-- CONTENIDO CONTACTO -->
+
+
+    <div class="flex-container-contacto">
+        <div class="flex-contacto-Item flex-item-1">
+            <p>Estamos en pleno corazón de Zona Oeste. <br>Horarios de atención: <br> Lun. a Vie. de 15:30 a 16:15 hs.
+                <br> Sábados a veces.
+            </p> <br>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.1602519192156!2d-58.60354837230383!3d-34.625390403619605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb86219ef2a49%3A0x70b83639fc58a26b!2sAthos%20Palma%201198-1100%2C%20B1685BQB%20El%20Palomar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1666058959226!5m2!1ses!2sar"
+                width="600" height="540" style="border:1;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+
+
+        <!-- FORMULARIO -->
+
+
+
+        <div class="flex-contacto-Item flex-item-2">
+            <p>Comunicate con Nosotros:</p> <br><br>
+            <form name="fvalida">
+
+                <fieldset>
+                    <!-- Separa grupos del form y agrega marco -->
+                    <!-- Nombre -->
+                    <label for="nombre">Nombre Completo: </label>
+                    <input size="auto" type="text" name="nombre" maxlength="30" placeholder="Ingrese su nombre">
+                </fieldset>
+
+                <fieldset>
+                    <!-- e-mail -->
+                    <label for="email">e-mail: </label>
+                    <input type="email" name="email" placeholder="Ingrese su e-mail">
+
+                    <!-- Teléfono-->
+                    <label for="telefono">Teléfono móvil: </label>
+                    <input type="tel" name="telefono" placeholder="Ingrese su teléfono (ej: 11-1234-5678)">
+                </fieldset>
+
+                <fieldset>
+                    <!-- Mensaje -->
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" cols="40" rows="6"
+                        placeholder="Buenos días, quería devolver esta guitarra de porquería que les compré porque..."></textarea>
+
+                    <!-- Controles -->
+                    <br><br>
+
+                </fieldset>
+                <input class="boton" type="reset" value="Borrar todo">
+
+                <!-- Al presionar el botón, se llama a la función de validacion -->
+                <!-- NO COLOCAR type="submit" al button. Eso hace que se envíe el form desde el botón aunque no se validen los campos -->
+                <input type="button" class="boton" id="submitBtn" value="Enviar" onclick="validarEnviar()">
+            </form>
+        </div>
+
+    </div>
+
+    <!-- VALIDACION FORMULARIO -->
+
+
+    <script>
+
+        function validarEnviar() {
+
+            // NOMBRE
+
+            if (document.fvalida.nombre.value.length <= 3) {
+                alert("Ingrese su Nombre y Apellido")
+                document.fvalida.nombre.focus()
+                return 0; // interrumpe el envío del form
+            }
+
+            // MAIL (Tiene validación interna del html. Validar sólo que no esté el campo vacío)
+            // ************** NO FUNCIONA LA VALIDACIÓN INTERNA !!!!!!!! //
+            if (document.fvalida.email.value == "") {
+                alert("Ingrese su correo electrónico")
+                document.fvalida.email.focus()
+                return 0;
+            }
+
+            // TELEFONO ( Formato 11-1234-5678)
+
+            let nroTel = document.fvalida.telefono.value
+
+            // if (!(/^([0-9]{2})+[- ]+([0-9]{4})+[- ]+([0-9]{4})$/i.test(nroTel))) {
+
+            if (!(/^([0-9]{2})+[- ]+([0-9]{4})+[- ]+([0-9]{4})$/.test(nroTel))) {
+                alert("Ingrese un número telefónico válido, con el formato indicado. Puede utilizar guiones o espacios.");
+                document.fvalida.telefono.focus();
+                return 0; // interrumpo el envío del form
+            }
+
+            //Finalmente, si llegó hasta aqui, se envia el form.
+            alert("Muchas gracias por enviar el formulario");
+            document.fvalida.submit();
+        }
+
+
+    </script>
+
+
+
     <!-- FOOTER -->
 
 
@@ -73,7 +181,7 @@
     <footer>
         <div class="flex-container-footer">
             <div style="font-family: 'Metal Mania', cursive">
-            <p>GAROMBAH</p>
+                <p>GAROMBAH</p>
             </div>
             <div><a href="nosotros.html">
                     <p>Nosotros</p>
@@ -82,18 +190,17 @@
 
             <div>
                 <span style="padding: 10px;">Seguinos:</span>
-                <div class="ig icon-redes"><a href="https://www.instagram.com/guitarrascasas/" target="_blank"><img src="icon/Ico_Ig_transp.png" alt="Instagram"
-                            height="100%"></a></div>
-                <div class="fb icon-redes"><a href="https://www.facebook.com/guitarrascasas/" target="_blank"><img src="icon/Ico_FB_transp.png" alt="Facebook"
-                            height="100%"></a></div>
-                <div class="wap icon-redes"><a href="https://wa.me/3532417742" target="_blank"><img src="icon/Ico_Wapp_transp.png" alt="Whatsapp"
-                            height="100%"></a></div>
-                <div class="tw icon-redes"><a href="https://twitter.com/GuitarrasCasas" target="_blank"><img src="icon/Ico_Tw_transp.png" alt="Twitter"
-                            height="100%"></a></div>
+                <div class="ig icon-redes"><a href="https://www.instagram.com/guitarrascasas/" target="_blank"><img
+                            src="icon/Ico_Ig_transp.png" alt="Instagram" height="100%"></a></div>
+                <div class="fb icon-redes"><a href="https://www.facebook.com/guitarrascasas/" target="_blank"><img
+                            src="icon/Ico_FB_transp.png" alt="Facebook" height="100%"></a></div>
+                <div class="wap icon-redes"><a href="https://wa.me/3532417742" target="_blank"><img
+                            src="icon/Ico_Wapp_transp.png" alt="Whatsapp" height="100%"></a></div>
+                <div class="tw icon-redes"><a href="https://twitter.com/GuitarrasCasas" target="_blank"><img
+                            src="icon/Ico_Tw_transp.png" alt="Twitter" height="100%"></a></div>
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
