@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="css/productos.css">
+
+    <link rel="icon" href="icon/fender.ico" type="image/x-icon">
+
+    <!-- Icono Home de FontAwesome -->
+    <script src="https://kit.fontawesome.com/5a5e2df851.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+
+    <!-- Google Font Metal Mania -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+    <!-- Google Font Rock Salt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+
+    <title>Productos</title>
+</head>
+
+<body>
+
+    <!-- HAMBURGER NAVBAR -->
+
+
+    <nav class="navBar">
+        <div class="logo">
+            Guitarras GAROMBAH
+        </div>
+        <input type="checkbox" id="menu-check">
+        <label class='menu-hamb-container' for="menu-check">
+            <div class='menu-hamb'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li> <!-- Icono de FontAwesome -->
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="Productos.html">Productos</a></li>
+            <li><a href="acordes.html">Acordes</a></li>
+            <li><a href="Contato.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <br><br><br>
+
+
+    <!-- LOGO Y TITULOS -->
+
+    <section>
+        <div>
+            <p class="logo" id="titulo">GAROMBAH</p>
+        </div>
+        <br>
+        <h1 id="lema"> Guitarras para rockeros duros</h1>
+        <h4 class="clickEscuchar">( ...click en las guitarras para escuchar... )</h4>
+        <br><br><br>
+    </section>
+
+
+    <!-- GRID DE CONTENIDOS -->
+
+    <section>
+        <script>
+            function tocar(acorde) {
+                audio = new Audio()
+                audio.src = (acorde)
+                audio.play()
+            }
+        </script>
+        <div class="grid-container">
+            <div class="grid-item item1" onclick="tocar('acordes/guitarras/guitarra-criolla.mp3')">
+                <img src="img/guitarra-criolla.png" alt="" width="100%"><br>
+                <p>Guitarra Criolla</p>
+            </div>
+            <div class="grid-item item2" onclick="tocar('acordes/guitarras/guitarra-acustica.mp3')">
+                <img src="img/guitarra-acustica.png" alt="guitarra acustica" width="100%"><br>
+                <p>Guitarra Acustica</p>
+            </div>
+            <div class="grid-item item3" onclick="tocar('acordes/guitarras/guitarra-electrica.mp3')">
+                <img src="img/guitarra-electrica.png" alt="guitarra electrica" width="100%"><br>
+                <p>Guitarra Electrica</p>
+            </div>
+            <div class="grid-item item4" onclick="tocar('acordes/guitarras/bajo-acustico.mp3')">
+                <img src="img/bajo.png" alt="bajo" width="100%"><br>
+                <p>Bajo</p>
+            </div>
+            </div>
+</section>
+
+
+
+
+    <!-- FOOTER -->
+
+
+    <br><br><br><br><br>
+    <footer>
+        <div class="flex-container-footer">
+            <div style="font-family: 'Metal Mania', cursive">
+            <p>GAROMBAH</p>
+            </div>
+            <div><a href="nosotros.html">
+                    <p>Nosotros</p>
+                </a>
+            </div>
+
+            <div>
+                <span style="padding: 10px;">Seguinos:</span>
+                <div class="ig icon-redes"><a href="https://www.instagram.com/guitarrascasas/" target="_blank"><img src="icon/Ico_Ig_transp.png" alt="Instagram"
+                            height="100%"></a></div>
+                <div class="fb icon-redes"><a href="https://www.facebook.com/guitarrascasas/" target="_blank"><img src="icon/Ico_FB_transp.png" alt="Facebook"
+                            height="100%"></a></div>
+                <div class="wap icon-redes"><a href="https://wa.me/3532417742" target="_blank"><img src="icon/Ico_Wapp_transp.png" alt="Whatsapp"
+                            height="100%"></a></div>
+                <div class="tw icon-redes"><a href="https://twitter.com/GuitarrasCasas" target="_blank"><img src="icon/Ico_Tw_transp.png" alt="Twitter"
+                            height="100%"></a></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
